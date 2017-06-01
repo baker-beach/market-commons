@@ -3,8 +3,6 @@ package com.bakerbeach.market.commons;
 import java.util.HashMap;
 import java.util.List;
 
-import com.bakerbeach.market.core.api.model.Message;
-
 public class MessageImpl extends HashMap<String, Object> implements Message {
 	private static final long serialVersionUID = 1L;
 

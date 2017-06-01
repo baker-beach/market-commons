@@ -1,7 +1,5 @@
 package com.bakerbeach.market.commons;
 
-import com.bakerbeach.market.core.api.model.FieldMessage;
-
 public class FieldMessageImpl extends MessageImpl implements FieldMessage {
 	private static final long serialVersionUID = 1L;
 	

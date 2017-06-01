@@ -3,8 +3,6 @@ package com.bakerbeach.market.commons;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import com.bakerbeach.market.core.api.model.Messages;
-
 @SuppressWarnings("serial")
 public class ServiceException extends Exception {	
 	protected Messages messages = new MessagesImpl();

@@ -6,10 +6,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import com.bakerbeach.market.core.api.model.FieldMessage;
-import com.bakerbeach.market.core.api.model.Message;
-import com.bakerbeach.market.core.api.model.Messages;
-
 public class MessagesImpl extends ArrayList<Message> implements Messages {
 	private static final long serialVersionUID = 1L;
 

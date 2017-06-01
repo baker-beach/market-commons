@@ -10,14 +10,7 @@
     <artifactId>market-commons</artifactId>
     <name>market-commons</name>
     <packaging>jar</packaging>
-    <version>1.0.1</version>
+    <version>3.0.0</version>
     <properties>
     </properties>
-    <dependencies>
-		<dependency>
-            <groupId>com.bakerbeach.market</groupId>
-			<artifactId>market-core-model</artifactId>
-            <version>[1.1.1,)</version>
-		</dependency>
-    </dependencies>
 </project>
