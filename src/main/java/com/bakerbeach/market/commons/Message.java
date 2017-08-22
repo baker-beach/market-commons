@@ -25,4 +25,8 @@ public interface Message {
 
 	String toString();
 
+	List<String> getTags();
+
+	void setTags(List<String> tags);
+	
 }
