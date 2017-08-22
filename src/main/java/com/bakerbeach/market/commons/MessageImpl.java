@@ -76,6 +76,15 @@ public class MessageImpl extends HashMap<String, Object> implements Message {
 	}
 
 	@Override
+	public boolean equals(Object other) {
+		if (other instanceof Message) {
+			return ((Message) other).getCode().equals(getCode());
+		} else {
+			return false;
+		}
+	}
+	
+	@Override
 	public String toString() {
 		StringBuilder result = new StringBuilder();
 		String NEW_LINE = System.getProperty("line.separator");
