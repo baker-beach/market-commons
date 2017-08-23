@@ -9,6 +9,9 @@ public interface Message {
 	public final static String TYPE_WARNING = "error";
 	public final static String TYPE_COMMAND = "command";
 
+	public final static String TAG_BOX = "box";
+	public final static String TAG_CART = "cart";
+	
 	String getType();
 
 	void setType(String type);

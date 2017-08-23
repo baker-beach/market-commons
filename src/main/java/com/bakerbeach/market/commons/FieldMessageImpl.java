@@ -16,7 +16,7 @@ public class FieldMessageImpl extends MessageImpl implements FieldMessage {
 	}
 
 	public FieldMessageImpl(String name, String type, String code, Object... args) {
-		super(type, code, args);
+		super(type, code, null, args);
 		this.name = name;
 	}
 	
