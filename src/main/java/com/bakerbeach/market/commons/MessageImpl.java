@@ -24,6 +24,14 @@ public class MessageImpl extends HashMap<String, Object> implements Message {
 		this.args = Arrays.asList(args);
 	}
 	
+	@Deprecated
+	public MessageImpl(String type, String code, Object... args) {
+		this.type = type;
+		this.code = code;
+		this.tags.add("foo");
+		this.args = Arrays.asList(args);
+	}
+	
 	@Override
 	public String getType() {
 		return type;
