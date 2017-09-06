@@ -3,8 +3,18 @@ package com.bakerbeach.market.commons;
 import java.util.List;
 import java.util.Map;
 
-public interface Messages extends List<Message> {
+public interface Messages {
 
+	void add(Message message);
+
+	void add(Messages messages);
+	
+	void addAll(List<Message> messages);
+
+	List<Message> getAll();
+
+	void clear();
+	
 	List<Message> getGlobalMessages();
 
 	List<Message> getGlobalMessages(String type);
@@ -50,5 +60,7 @@ public interface Messages extends List<Message> {
 	Map<String, Object> getData();
 
 	void setData(Map<String, Object> data);
+
+	boolean isEmpty();
 
 }

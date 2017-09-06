@@ -3,7 +3,7 @@ package com.bakerbeach.market.commons;
 import java.util.List;
 
 public interface Message {
-	
+
 	public final static String TYPE_INFO = "info";
 	public final static String TYPE_ERROR = "error";
 	public final static String TYPE_WARNING = "error";
@@ -11,7 +11,11 @@ public interface Message {
 
 	public final static String TAG_BOX = "box";
 	public final static String TAG_CART = "cart";
-	
+
+	String getId();
+
+	void setId(String id);
+
 	String getType();
 
 	void setType(String type);
@@ -31,5 +35,5 @@ public interface Message {
 	List<String> getTags();
 
 	void setTags(List<String> tags);
-	
+
 }

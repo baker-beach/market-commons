@@ -8,22 +8,30 @@ import java.util.List;
 public class MessageImpl extends HashMap<String, Object> implements Message {
 	private static final long serialVersionUID = 1L;
 
+	private String id;
 	private String type;
 	private String code;
 	private List<Object> args = new ArrayList<>();
 	private List<String> tags = new ArrayList<>();
 
+	public MessageImpl(String id, String type) {
+		this.id = id;
+		this.type = type;
+	}
+
+	public MessageImpl(String id, String type, String code, List<String> tags, List<Object> args) {
+		this.id = id;
+		this.type = type;
+		this.code = code;
+		this.tags.addAll(tags);
+		this.args = args;
+	}
+
+	@Deprecated
 	public MessageImpl(String type) {
 		this.type = type;
 	}
 
-	public MessageImpl(String type, String code, List<String> tags, Object... args) {
-		this.type = type;
-		this.code = code;
-		this.tags.addAll(tags);
-		this.args = Arrays.asList(args);
-	}
-	
 	@Deprecated
 	public MessageImpl(String type, String code, Object... args) {
 		this.type = type;
@@ -31,7 +39,17 @@ public class MessageImpl extends HashMap<String, Object> implements Message {
 		this.tags.add("foo");
 		this.args = Arrays.asList(args);
 	}
-	
+
+	@Override
+	public String getId() {
+		return id;
+	}
+
+	@Override
+	public void setId(String id) {
+		this.id = id;
+	}
+
 	@Override
 	public String getType() {
 		return type;
@@ -66,12 +84,12 @@ public class MessageImpl extends HashMap<String, Object> implements Message {
 	public void setArgs(Object... args) {
 		this.args = Arrays.asList(args);
 	}
-	
+
 	@Override
 	public List<String> getTags() {
 		return tags;
 	}
-	
+
 	@Override
 	public void setTags(List<String> tags) {
 		this.tags = tags;
@@ -85,13 +103,14 @@ public class MessageImpl extends HashMap<String, Object> implements Message {
 			return false;
 		}
 	}
-	
+
 	@Override
 	public String toString() {
 		StringBuilder result = new StringBuilder();
 		String NEW_LINE = System.getProperty("line.separator");
 
 		result.append(" message {" + NEW_LINE);
+		result.append(" id: " + id + NEW_LINE);
 		result.append(" type: " + type + NEW_LINE);
 		result.append(" code: " + code + NEW_LINE);
 		result.append(" tags: " + tags + NEW_LINE);
