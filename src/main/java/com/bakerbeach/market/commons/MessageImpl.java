@@ -14,11 +14,6 @@ public class MessageImpl extends HashMap<String, Object> implements Message {
 	private List<Object> args = new ArrayList<>();
 	private List<String> tags = new ArrayList<>();
 
-	public MessageImpl(String id, String type) {
-		this.id = id;
-		this.type = type;
-	}
-
 	public MessageImpl(String id, String type, String code, List<String> tags, List<Object> args) {
 		this.id = id;
 		this.type = type;
@@ -26,18 +21,10 @@ public class MessageImpl extends HashMap<String, Object> implements Message {
 		this.tags.addAll(tags);
 		this.args = args;
 	}
-
-	@Deprecated
-	public MessageImpl(String type) {
-		this.type = type;
-	}
-
-	@Deprecated
-	public MessageImpl(String type, String code, Object... args) {
+	
+	public MessageImpl(String type, String code) {
 		this.type = type;
 		this.code = code;
-		this.tags.add("foo");
-		this.args = Arrays.asList(args);
 	}
 
 	@Override

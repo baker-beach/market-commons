@@ -12,7 +12,10 @@ public class MessagesImpl implements Messages {
 
 	@Override
 	public void add(Message message) {
-		map.put(message.getId(), message);
+		
+		if (message != null) {
+			map.put(message.getId(), message);			
+		}
 	}
 
 	@Override

@@ -1,5 +1,7 @@
 package com.bakerbeach.market.commons;
 
+import java.util.Arrays;
+
 public class FieldMessageImpl extends MessageImpl implements FieldMessage {
 	private static final long serialVersionUID = 1L;
 	
@@ -7,16 +9,16 @@ public class FieldMessageImpl extends MessageImpl implements FieldMessage {
 	private Object rejectedValue;
 	
 	public FieldMessageImpl(String type) {
-		super(type);
+		super(type,"");
 	}
 	
 	public FieldMessageImpl(String type, String name) {
-		super(type);
+		super(type,"");
 		this.name = name;
 	}
 
 	public FieldMessageImpl(String name, String type, String code, Object... args) {
-		super(type, code, null, args);
+		super(name,type, code, null, Arrays.asList(args));
 		this.name = name;
 	}
 	
