@@ -10,7 +10,7 @@
     <artifactId>market-commons</artifactId>
     <name>market-commons</name>
     <packaging>jar</packaging>
-    <version>3.0.6</version>
+    <version>3.0.7</version>
     <properties>
     </properties>
 </project>
