@@ -22,9 +22,17 @@ public class MessageImpl extends HashMap<String, Object> implements Message {
 		this.args = args;
 	}
 	
+	@Deprecated
 	public MessageImpl(String type, String code) {
 		this.type = type;
 		this.code = code;
+		tags.add("box");
+	}
+	
+	public MessageImpl(String type, String code, String tag) {
+		this.type = type;
+		this.code = code;
+		tags.add(tag);
 	}
 
 	@Override
