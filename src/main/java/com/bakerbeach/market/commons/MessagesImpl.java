@@ -1,12 +1,13 @@
 package com.bakerbeach.market.commons;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MessagesImpl implements Messages {
+public class MessagesImpl implements Messages, Serializable {
 	Map<String, Message> map = new LinkedHashMap<String, Message>();
 	Map<String,Object> data = new HashMap<String,Object>();
 
